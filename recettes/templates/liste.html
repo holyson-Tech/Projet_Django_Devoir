@@ -1,0 +1,12 @@
+<h1>Liste des recettes</h1>
+
+<a href="{% url 'ajouter_recette' %}">Ajouter une recette</a>
+
+<ul>
+    {% for r in recettes %}
+        <li>{{ r.date }} - {{ r.montant }} FCFA - {{ r.description }}</li>
+    {% empty %}
+        <li>Aucune recette</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'accueil' %}">Retour à l'accueil</a>
