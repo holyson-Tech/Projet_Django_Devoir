@@ -1,12 +1,21 @@
-<h1>Liste des recettes</h1>
+{% extends 'base.html' %}
 
-<a href="{% url 'ajouter_recette' %}">Ajouter une recette</a>
+{% block title %}Liste des recettes{% endblock %}
 
-<ul>
-    {% for r in recettes %}
-        <li>{{ r.date }} - {{ r.montant }} FCFA - {{ r.description }}</li>
-    {% empty %}
-        <li>Aucune recette</li>
-    {% endfor %}
-</ul>
+{% block content %}
+<div class="card">
+    <h2>📋 Liste des recettes</h2>
+
+    <a class="btn" href="{% url 'ajouter_recette' %}">➕ Ajouter une recette</a>
+
+    <ul>
+        {% for r in recettes %}
+            <li>{{ r.date }} - {{ r.montant }} FCFA - {{ r.description }}</li>
+        {% empty %}
+            <li>Aucune recette enregistrée</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
 <a href="{% url 'accueil' %}">Retour à l'accueil</a>
+
