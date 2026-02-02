@@ -3,12 +3,14 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Gestion des Recettes{% endblock %}</title>
+    <title>{% block title %}Gestion Recettes{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
-    <!-- Zone ou il y'aura la nav bar -->
+    <!-- NAVBAR -->
     <header class="navbar">
         <div class="container">
             <h1 class="logo">🚚 Gestion Recettes</h1>
@@ -19,11 +21,13 @@
         </div>
     </header>
 
+    <!-- CONTENU DYNAMIQUE -->
     <main class="container">
-        {% block content %}{% endblock %}
+        {% block content %}
+        {% endblock %}
     </main>
 
-
+    <!-- FOOTER -->
     <footer class="footer">
         <p>© 2026 - Application de gestion des recettes</p>
     </footer>

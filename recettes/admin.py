@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import recette
+from .models import Recette
 
 # Register your models here.
-@admin.register(recette)
+@admin.register(Recette)
 class RecetteAdmin(admin.ModelAdmin):
     list_display = ('date', 'montant', 'description')
