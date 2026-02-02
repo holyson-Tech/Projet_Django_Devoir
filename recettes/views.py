@@ -16,3 +16,6 @@ def ajouter_recette(request):
         form.save()
         return redirect('liste_recettes')
     return render(request, 'ajouter.html', {'form': form})
+
+def accueil(request):
+    return render(request, 'accueil.html')

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+<div class="home-container">
+    <h1>Bienvenue sur Gestion Recettes 🚚</h1>
+    <p>Pour commencer, vous pouvez consulter les recettes existantes ou en ajouter une nouvelle.</p>
+    <a href="{% url 'liste_recettes' %}" class="btn">Voir les recettes</a>
+    <a href="{% url 'ajouter_recette' %}" class="btn">Ajouter une recette</a>
+</div>
+{% endblock %}
+<a href="{% url 'accueil' %}">Retour à l'accueil</a>
