@@ -8,13 +8,16 @@
 
     <a class="btn" href="{% url 'ajouter_recette' %}">➕ Ajouter une recette</a>
 
-    <ul>
-        {% for r in recettes %}
-            <li>{{ r.date }} - {{ r.montant }} FCFA - {{ r.description }}</li>
-        {% empty %}
-            <li>Aucune recette enregistrée</li>
-        {% endfor %}
-    </ul>
+    <ul class="recette-list">
+    {% for recette in recettes %}
+        <li>
+            <span class="recette-desc">{{ recette.description }}</span>
+            <span class="recette-prix">{{ recette.prix }} FCFA</span>
+        </li>
+    {% empty %}
+        <li>Aucune recette disponible</li>
+    {% endfor %}
+</ul>
 </div>
 {% endblock %}
 <a href="{% url 'accueil' %}">Retour à l'accueil</a>
