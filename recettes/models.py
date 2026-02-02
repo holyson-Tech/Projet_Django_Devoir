@@ -7,5 +7,5 @@ class Recette(models.Model):
     description = models.TextField()
     montant = models.FloatField()
 
-    def __str__(self):
-        return self.titre
+def __str__(self):
+        return f"{self.description} au prix de : {self.prix} FCFA "

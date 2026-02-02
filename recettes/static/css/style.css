@@ -150,3 +150,59 @@ button:hover {
     color: #64748b;
     font-size: 14px;
 }
+
+
+/* Conteneur de la liste */
+.recette-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 600px;
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+/* Chaque recette */
+.recette-list li {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Effet hover */
+.recette-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Description */
+.recette-desc {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Prix */
+.recette-prix {
+    font-size: 15px;
+    font-weight: 600;
+    color: #2e7d32;
+    background: #e8f5e9;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+/* Responsive */
+@media (max-width: 600px) {
+    .recette-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .recette-prix {
+        margin-top: 8px;
+    }
+}   
